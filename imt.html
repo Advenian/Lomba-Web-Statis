@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kalkulator BMI</title>
+</head>
+<body>
+  <h1>Kalkulator BMI</h1>
+  <label for="berat">Berat Badan (kg):</label>
+  <input type="number" id="berat">
+  <br>
+  <label for="tinggi">Tinggi Badan (cm):</label>
+  <input type="number" id="tinggi">
+  <br>
+  <button onclick="hitungBMI()">Hitung BMI</button>
+  <br>
+  <p>Hasil:</p>
+  <p id="hasil"></p>
+
+  <script>
+    function hitungBMI() {
+      // Ambil nilai berat badan dan tinggi badan dari input
+      var berat = document.getElementById("berat").value;
+      var tinggi = document.getElementById("tinggi").value / 100; // ubah ke meter
+
+      // Hitung BMI
+      var bmi = berat / (tinggi * tinggi);
+
+      // Tampilkan hasil
+      document.getElementById("hasil").innerHTML = "BMI Anda: " + bmi.toFixed(1);
+    }
+
+    //tinggal tambahi if else biar tau kalo kita oobesiter atau tiidak 
+  
+  </script>
+</body>
+</html>
