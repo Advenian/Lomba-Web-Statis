@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Kalkulator BMI</title>
 </head>
+
 <body>
   <h1>Kalkulator BMI</h1>
   <label for="berat">Berat Badan (kg):</label>
@@ -15,6 +17,9 @@
   <br>
   <p>Hasil:</p>
   <p id="hasil"></p>
+
+  <p>Kurang dari 18,5 berarti berat badan kurang (underweight). <br> Antara 18,5 - 24,9 berarti berat badan normal. <br>
+    Antara 25-29,9 berarti berat badan berlebih (overweight). <br> Di atas 30 berarti obesitas</p>
 
   <script>
     function hitungBMI() {
@@ -29,8 +34,11 @@
       document.getElementById("hasil").innerHTML = "BMI Anda: " + bmi.toFixed(1);
     }
 
-    //tinggal tambahi if else biar tau kalo kita oobesiter atau tiidak 
-  
+        //tinggal tambahi if else biar tau kalo kita oobesiter atau tiidak
   </script>
 </body>
+
+</html>
+</body>
+
 </html>
