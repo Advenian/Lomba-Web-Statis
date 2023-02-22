@@ -19,10 +19,7 @@
   var sistolik = parseInt(document.getElementById("sistolik").value);
   var diastolik = parseInt(document.getElementById("diastolik").value);
   var tekananDarah = "";
-  var kalidiastolik = 2 * diastolik;
-  var hasil = kalidiastolik + sistolik;
-  var end = hasil/3;
-  if (end <= 90 ) {
+  if (sistolik <= 90 || diastolik <= 60) {
     tekananDarah = "Tekanan darah rendah coy coba naikin lagi cuy";
   } else if (sistolik <= 120 && diastolik <= 80) {
     tekananDarah = "Tekanan darah normal";
@@ -35,9 +32,7 @@
   } else {
     tekananDarah = "Hipertensi tingkat 3";
   }
-
-
-  document.getElementById("tekananDarah").innerHTML = "Hasil: " + end + " mmhg";
+  document.getElementById("tekananDarah").innerHTML = "Hasil: " + tekananDarah;
 }
 
 
