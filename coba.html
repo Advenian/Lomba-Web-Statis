@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Perhitungan Tekanan Darah</title>
+</head>
+<body>
+  <h1>Perhitungan Tekanan Darah</h1>
+  <label for="sistolik">Sistolik:</label>
+  <input type="number" id="sistolik"><br><br>
+  <label for="diastolik">Diastolik:</label>
+  <input type="number" id="diastolik"><br><br>
+  <button onclick="hitungTekananDarah()">Hitung Tekanan Darah</button><br><br>
+  <span id="hasil">hasil:</span>
+  <br>
+  <span id="keterangan"></span>
+</body>
+<script type="text/javascript">
+  
+  function hitungTekananDarah() {
+  var sistolik = parseInt(document.getElementById("sistolik").value);
+  var diastolik = parseInt(document.getElementById("diastolik").value);
+  var keterangan = "";
+  // var saran = "";
+
+  if (isNaN(sistolik) || isNaN(diastolik)) {
+    keterangan = "Silahkan masukkan nilai tekanan darah";
+  } else if (sistolik < 0 || diastolik < 0) {
+    keterangan = "Tidak ada tekanan darah negatif";
+  } else if (sistolik >= 180 || diastolik >= 120) {
+    keterangan = "Tekanan darah Anda sangat tinggi, segera temui dokter";
+  } else if (sistolik >= 140 || diastolik >= 90) {
+    keterangan = "Tekanan darah Anda tinggi";
+  } else if (sistolik >= 120 || diastolik >= 80) {
+    keterangan = "Tekanan darah Anda normal";
+  } else {
+    keterangan = "Tekanan darah Anda rendah";
+  }
+
+  hasil += "Keterangan: " + keterangan;
+  document.getElementById("hasil").innerHTML = keterangan;
+}
+</script>
+
+
+</html>
