@@ -6,13 +6,12 @@
 <body>
   <h1>Kalkulator Gula Darah</h1>
   <label for="gulaDarah">Kadar Gula Darah (mg/dL):</label>
-  <input type="number" id="gulaDarah" minlength="1" maxlength="3">
+  <input type="number" id="gulaDarah">
   <br>
   <button onclick="cekGulaDarah()">Cek Kadar Gula Darah</button>
   <br>
   <p>Hasil:</p>
   <p id="hasil"></p>
-
 
 
   <script>
@@ -22,13 +21,13 @@
 
       // Cek kadar gula darah dan tampilkan hasil
       if (gulaDarah < 70) {
-        document.getElementById("hasil").innerHTML = "Kadar gula darah kurang dari 70 mg/dL: rendahKadar gula darah rendah";
+        document.getElementById("hasil").innerHTML = "Kadar gula darah rendah";
       } else if (gulaDarah >= 70 && gulaDarah < 140) {
-        document.getElementById("hasil").innerHTML = "Kadar gula darah antara 70-140 mg/dL: normal";
+        document.getElementById("hasil").innerHTML = "Kadar gula darah normal";
       } else if (gulaDarah >= 140 && gulaDarah < 200) {
-        document.getElementById("hasil").innerHTML = "Kadar gula darah antara 140-200 mg/dL: tinggi, prediabetes";
+        document.getElementById("hasil").innerHTML = "Kadar gula darah tinggi, prediabetes";
       } else if (gulaDarah >= 200) {
-        document.getElementById("hasil").innerHTML = "Kadar gula darah lebih dari 200 mg/dL: sangat tinggi, diabetes";
+        document.getElementById("hasil").innerHTML = "Kadar gula darah sangat tinggi, diabetes";
       } else {
         document.getElementById("hasil").innerHTML = "Masukkan nilai yang valid";
       }

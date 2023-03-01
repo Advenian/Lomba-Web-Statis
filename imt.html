@@ -14,31 +14,73 @@
     <button onclick="hitungBMI()">Hitung</button>
     <br><br>
     <div id="hasil"></div>
+    <br>
+    <pre id="penjelasan"></pre>
 
+<link rel="stylesheet" type="text/css" href=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js">
 <script type="text/javascript">
+
   
   function hitungBMI() {
   var berat = document.getElementById("berat-badan").value;
   var tinggi = document.getElementById("tinggi-badan").value;
   var bmi = berat / Math.pow(tinggi/100, 2);
   var keterangan = "";
+  var saran = "";
   
   if (bmi < 18.5) {
     keterangan = "Berat badan kurang";
+    saran = "1. Konsumsi makanan yang sehat dan bergizi, termasuk sayuran, buah-buahan, protein rendah lemak, karbohidrat kompleks, dan lemak sehat. \n2. Konsumsi makanan yang lebih sering dalam jumlah kecil-kecil, daripada makan dalam jumlah besar dan jarang.\n3. Minum air yang cukup untuk membantu menjaga tubuh tetap terhidrasi. \n4. Lakukan latihan fisik secara teratur, seperti berjalan, berlari, bersepeda, atau berenang. \n5. Tidur yang cukup untuk membantu tubuh memulihkan diri dan meningkatkan metabolisme. \n6. Hindari kebiasaan merokok dan minum alkohol, karena dapat mempengaruhi nafsu makan dan mengurangi penyerapan nutrisi. \n7. Konsultasikan dengan dokter atau ahli gizi jika Anda memiliki masalah kesehatan atau ingin mengetahui program diet dan latihan yang cocok untuk Anda.";
+
+
+
+
   } else if (bmi >= 18.5 && bmi < 25) {
     keterangan = "Berat badan normal";
+    saran = "1. Makanlah makanan sehat: Pilihlah makanan yang kaya akan nutrisi seperti sayuran, buah-buahan, biji-bijian, dan protein rendah lemak. Hindari makanan yang tinggi kalori dan lemak jenuh. \n2. Olahraga secara teratur: Lakukanlah olahraga setidaknya 30 menit setiap hari. Jenis olahraga yang disarankan antara lain berjalan kaki, berlari, berenang, atau bersepeda. \n3. Kurangi konsumsi gula: Batasi asupan gula, termasuk gula dalam minuman manis, kue-kue, dan camilan. \n4. Minum banyak air: Minumlah setidaknya 8 gelas air putih setiap hari. Ini membantu menjaga tubuh tetap terhidrasi dan mengurangi rasa lapar. \n5.Tidur yang cukup: Tidurlah selama 7-8 jam setiap malam. Kekurangan tidur dapat meningkatkan nafsu makan dan menyebabkan peningkatan berat badan. \n6. Hindari stress: Cari cara untuk mengurangi stres, seperti meditasi, yoga, atau kegiatan yang menenangkan. \n7. Jaga keseimbangan kalori: Upayakan untuk mengonsumsi kalori yang sama dengan yang Anda bakar setiap hari. Ini dapat membantu menjaga berat badan tetap stabil.";
+
+
+
+
   } else if (bmi >= 25 && bmi < 30) {
     keterangan = "Berat badan berlebih";
+    saran = "1. Lakukan olahraga secara teratur: Cobalah untuk melakukan olahraga setidaknya 30 menit per hari. Pilih aktivitas fisik yang menyenangkan seperti berjalan, bersepeda atau berenang. \n2. Kurangi konsumsi kalori: Kurangi konsumsi makanan yang mengandung lemak dan gula tinggi. Makanlah lebih banyak buah-buahan, sayuran, dan sumber protein rendah lemak seperti ikan dan ayam tanpa kulit. \n3. Perbaiki pola makan: Makanlah lebih sering dan dalam porsi kecil. Jangan melewatkan sarapan, dan hindari ngemil di malam hari. \n4. Perbanyak minum air putih: Minumlah air putih secara teratur untuk membantu membuang racun dan menjaga tubuh tetap terhidrasi. \n5. Hindari minuman beralkohol: Hindari minuman beralkohol dan minuman manis berkalori tinggi. \n6. Tidur yang cukup: Tidurlah selama 7-8 jam per hari untuk membantu mengontrol nafsu makan dan menjaga metabolisme tetap sehat. \n7. Konsultasikan dengan dokter: Jika Anda mengalami kesulitan menurunkan berat badan atau memiliki kondisi medis yang mendasar, konsultasikan dengan dokter atau ahli gizi.";
+
+
+
+
   } else {
     keterangan = "Obesitas";
+    saran = "1. Obesitas adalah penyakit yang terjadi ketika seseorang kelebihan berat badan atau memiliki banyak lemak ekstra. Obesitas dapat meningkatkan risiko berbagai penyakit seperti diabetes, penyakit jantung, stroke dan beberapa jenis kanker. \n2.Nutrisi seimbang \nMakanlah makanan yang tinggi serat, protein, dan rendah kalori, serta kurangi makanan yang tinggi lemak, gula, dan garam. \n3. Hindari makanan olahan dan makanan cepat saji serta perbanyak konsumsi sayur dan buah segar. \n4. Preferensi Makanan \nCobalah makan dalam porsi kecil tapi sering dan hindari makan malam. Jangan melewatkan sarapan, karena sarapan dapat membantu metabolisme Anda. \n5. Jika Anda sangat gemuk, bicarakan dengan dokter Anda tentang program penurunan berat badan yang sesuai, seperti B. diet rendah kalori, pengobatan, atau operasi penurunan berat badan.";
   }
+
+
   
   var hasil = "BMI Anda: " + bmi.toFixed(1) + "<br>";
   hasil += "Keterangan: " + keterangan;
   document.getElementById("hasil").innerHTML = hasil;
-}
+ var penjelasan = document.getElementById("penjelasan");
+        penjelasan.innerHTML = "";
+        var kata = "penjelasan: " + saran;
+        var i = 0;
+        var j = 0;
+        var animasi = setInterval(function() {
+          if (i < kata.length) {
+            penjelasan.innerHTML += kata.charAt(i);
+            i++;
+          } else if (j < 3) {
+            penjelasan.innerHTML += ".";
+            j++;
+          } else {
+            clearInterval(animasi);
+          }
+        }, 5);
+      }
+
 
 </script>
+
+
 
   </body>
 </html>
