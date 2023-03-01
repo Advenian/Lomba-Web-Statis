@@ -10,28 +10,68 @@
   <br>
   <button onclick="cekGulaDarah()">Cek Kadar Gula Darah</button>
   <br>
-  <p>Hasil:</p>
   <p id="hasil"></p>
+  <br>
+  <pre style="font-family: Roboto;" id="keterangan3"></pre>
 
 
   <script>
     function cekGulaDarah() {
       // Ambil nilai kadar gula darah dari input
       var gulaDarah = document.getElementById("gulaDarah").value;
+              var keterangan3 = "";
+              var saran2 = "";
 
       // Cek kadar gula darah dan tampilkan hasil
       if (gulaDarah < 70) {
-        document.getElementById("hasil").innerHTML = "Kadar gula darah rendah";
+        keterangan3 = "Kadar gula darah rendah";
+        saran3 = "1. Makan dengan teratur:\nIngatlah untuk makan setidaknya tiga kali sehari dan jangan melewatkan waktu makan. Perut kosong dapat menurunkan gula darah, jadi penting untuk makan secara teratur.\n2. Pilih makanan yang sehat:\nUsahakan untuk memilih makanan yang sehat dan berserat tinggi seperti sayuran, buah-buahan dan biji-bijian.\nHindari makanan tinggi gula atau karbohidrat sederhana seperti permen, minuman manis, roti tawar dan nasi putih.\n3. Minum cukup air:\nMinum banyak air dapat membantu menjaga kadar gula darah tetap stabil.\n4. Olahraga:\nOlahraga teratur dapat meningkatkan sensitivitas insulin dan membantu menjaga kadar gula darah tetap stabil. Pilih olahraga yang Anda sukai, seperti hiking, berenang, atau bersepeda.\n5. Konsumsi makanan dengan gula alami:\nMakanan yang mengandung gula alami, seperti buah, kurma, madu, atau sirup maple, dapat membantu menjaga kadar gula darah tetap stabil.\n6. Periksakan kesehatan secara teratur:\nPenting untuk memeriksa kadar gula darah secara teratur dan berkonsultasi dengan dokter jika terjadi perubahan yang signifikan.";
+
+
       } else if (gulaDarah >= 70 && gulaDarah < 140) {
-        document.getElementById("hasil").innerHTML = "Kadar gula darah normal";
+        keterangan3 = "Kadar gula darah normal";
+        saran3 = "1. Makan makanan yang sehat dan seimbang:\nKontrol asupan karbohidrat, protein, dan lemak. Kurangi konsumsi makanan manis dan karbohidrat sederhana, yang dapat meningkatkan gula darah secara drastis.\n2. Berolahraga secara teratur:\nOlahraga dapat meningkatkan sensitivitas insulin dan membantu tubuh mengatur gula darah dengan lebih efektif. Usahakan untuk melakukan olahraga minimal 30 menit setiap hari atau tiga kali seminggu.\n3. Hindari stres:\nStres dapat meningkatkan kadar gula darah.\n4. Minum air yang cukup:\nAir membantu mengatur gula darah dengan membantu tubuh menghilangkan kelebihan gula dalam urin.";
+
+
       } else if (gulaDarah >= 140 && gulaDarah < 200) {
-        document.getElementById("hasil").innerHTML = "Kadar gula darah tinggi, prediabetes";
+        keterangan3 = "Kadar gula darah tinggi, prediabetes";
+        saran3 = "1. Lakukan perubahan gaya hidup sehat seperti:\n* Mengurangi stres dan tidur yang cukup setiap hari.\n* Meningkatkan aktivitas fisik dengan olahraga teratur minimal.\n* Menjaga pola makan yang seimbang dengan mengonsumsi makanan yang rendah gula, rendah karbohidrat, dan tinggi serat.\n2. Memantau kadar gula darah secara teratur dengan mengukur kadar gula darah di rumah atau melakukan tes darah di laboratorium.\n3. Mengonsumsi obat-obatan yang diresepkan oleh dokter, jika diperlukan.\n4. Konsultasikan dengan dokter atau ahli gizi untuk perawatan yang tepat dan terus ikuti rejimen yang direkomendasikan.";
+
+
       } else if (gulaDarah >= 200) {
-        document.getElementById("hasil").innerHTML = "Kadar gula darah sangat tinggi, diabetes";
+        keterangan3 = "Kadar gula darah sangat tinggi, diabetes";
+        saran3 = "1. Jadikan pola makan Anda lebih sehat dengan memilih makanan yang rendah karbohidrat dan gula, tinggi serat dan kaya nutrisi.\n2. Tingkatkan aktivitas fisik dengan berolahraga secara rutin dan konsisten minimal 30 menit setiap hari.\n3. Memantau kadar gula darah secara teratur dengan mengukur kadar gula darah di rumah atau melakukan tes darah di laboratorium.\n4. Mengonsumsi obat-obatan yang diresepkan oleh dokter, seperti insulin atau obat diabetes oral, jika diperlukan,Menghindari kebiasaan merokok dan mengonsumsi alkohol secara berlebihan.";
+
+
+
+
+
+
+
       } else {
-        document.getElementById("hasil").innerHTML = "Masukkan nilai yang valid";
+        keterangan3 = "Masukkan nilai yang valid";
+        saran3 = "bababababab";
       }
-    }
+
+  hasil += "hasil: " + keterangan3;
+  document.getElementById("hasil").innerHTML = "hasil:" + keterangan3;
+ var penjelasan = document.getElementById("keterangan3");
+        penjelasan.innerHTML = "";
+        var kata = "saran: " + saran3;
+        var i = 0;
+        var j = 0;
+        var animasi = setInterval(function() {
+          if (i < kata.length) {
+            penjelasan.innerHTML += kata.charAt(i);
+            i++;
+          } else if (j < 3) {
+            penjelasan.innerHTML += ".";
+            j++;
+          } else {
+            clearInterval(animasi);
+          }
+        }, 5);
+      }
   </script>
 </body>
 </html>
