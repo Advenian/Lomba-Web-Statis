@@ -66,6 +66,9 @@
         color: rgb(36, 36, 36);
         font-size: 15px;
       }
+      .cool-title {
+        font-size: clamp(20px, 3vw, 45px);
+      }
     </style>
   </head>
 
@@ -136,10 +139,241 @@
     <!-- End Hero -->
 
     <main id="main">
-      <!-- ======= About Section ======= -->
+      <!-- ======= Testimonials Section ======= -->
+      <section id="testimonials" class="testimonials section-bg">
+        <div class="container" data-aos="fade-up">
+          <div class="section-title">
+            <h2>Testimonials</h2>
+          </div>
 
+          <div
+            class="testimonials-slider swiper"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="container" data-aos="fade-up">
+                  <div class="section-title">
+                    <h2>INDEX MASSA TUBUH</h2>
+                    <p>
+                      Indeks Massa Tubuh (IMT) adalah indeks yang membandingkan berat
+                      badan dan tinggi badan dalam kilogram dibagi tinggi badan dalam
+                      meter kuadrat. IMT adalah indikator berat badan yang ideal.
+                    </p>
+                  </div>
+                  <div></div>
+                  <div id="particles-js"></div>
+                  <div class="row">
+                    <div class="col"></div>
+                    <div class="col" style="width: 50%">
+                      <h3 class="text-center cool-title">IMT &amp; PENJELASAN</h3>
+                      <hr />
+                    </div>
+                    <div class="col"></div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-4">
+                      <img src="assets/img/imt/imt.png" class="img-fluid" alt="" />
+                    </div>
+                    <div class="col-lg-8 pt-4 pt-lg-0 content">
+                      <p class="fst-italic">
+                        Masukan Inputan yang benar agar tidak salah dalam penghitungan
+                        IMT
+                      </p>
+                      <div class="row">
+                        <div class="col-lg-6">
+                          <ul>
+                            <li>
+                              <div class="row">
+                                <div class="form-floating mb-3 col">
+                                  <input
+                                    type="number"
+                                    id="berat-badan"
+                                    aria-label="First name"
+                                    class="form-control"
+                                    placeholder="."
+                                  />
+        
+                                  <label for="berat-badan">Berat Badan (kg):</label>
+                                </div>
+        
+                                <div class="form-floating mb-3">
+                                  <input
+                                    type="number"
+                                    id="tinggi-badan"
+                                    aria-label="Last name"
+                                    class="form-control"
+                                    placeholder="."
+                                  />
+                                  <label for="tinggi-badan">Tinggi Badan (cm):</label>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="d-flex align-items-center text-center">
+                              <div class="form-floating mb-3">
+                                <button onclick="hitungBMI()" class="cool-button">
+                                  Hitung
+                                </button>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <span class="text-center cool-text" id="hasil"></span>
+                  </div>
+                </div>
+              </div>
+              <!-- End testimonial item -->
+
+              <div class="swiper-slide">
+                <div class="container" data-aos="fade-up">
+          <div class="section-title">
+            <h2>TEKANAN DARAH</h2>
+            <p>
+              Tekanan darah merupakan tekanan yang terjadi pada pembuluh darah
+              arteri ketika darah kita di pompa oleh jantung untuk di alirkan ke
+              seluruh anggota tubuh.
+            </p>
+          </div>
+          <div class="row">
+            <div class="col"></div>
+            <div class="col" style="width: 50%">
+              <h3 class="text-center cool-title">IMT &amp; PENJELASAN</h3>
+              <hr />
+            </div>
+            <div class="col"></div>
+          </div>
+          <div class="row">
+            <div class="col-lg-4">
+              <img src="assets/img/imt/imt.png" class="img-fluid" alt="" />
+            </div>
+            <div class="col-lg-8 pt-4 pt-lg-0 content">
+              <p class="fst-italic">
+                Masukan Inputan yang benar agar tidak salah dalam penghitungan
+                IMT
+              </p>
+              <div class="row">
+                <div class="col-lg-6">
+                  <ul>
+                    <li>
+                      <div class="row">
+                        <div class="form-floating mb-3 col">
+                          <input
+                            type="number"
+                            id="berat-badan"
+                            aria-label="First name"
+                            class="form-control"
+                            placeholder="."
+                          />
+
+                          <label for="berat-badan">Berat Badan (kg):</label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                          <input
+                            type="number"
+                            id="tinggi-badan"
+                            aria-label="Last name"
+                            class="form-control"
+                            placeholder="."
+                          />
+                          <label for="tinggi-badan">Tinggi Badan (cm):</label>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="d-flex align-items-center text-center">
+                      <div class="form-floating mb-3">
+                        <button onclick="hitungBMI()" class="cool-button">
+                          Hitung
+                        </button>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <span class="text-center cool-text" id="hasil"></span>
+          </div>
+        </div>
+              </div>
+              <!-- End testimonial item -->
+
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <img
+                    src="assets/img/testimonials/testimonials-3.jpg"
+                    class="testimonial-img"
+                    alt=""
+                  />
+                  <h3>Jena Karlis</h3>
+                  <h4>Store Owner</h4>
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i> Enim
+                    nisi quem export duis labore cillum quae magna enim sint
+                    quorum nulla quem veniam duis minim tempor labore quem eram
+                    duis noster aute amet eram fore quis sint minim.
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+              <!-- End testimonial item -->
+
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <img
+                    src="assets/img/testimonials/testimonials-4.jpg"
+                    class="testimonial-img"
+                    alt=""
+                  />
+                  <h3>Matt Brandon</h3>
+                  <h4>Freelancer</h4>
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i> Fugiat
+                    enim eram quae cillum dolore dolor amet nulla culpa multos
+                    export minim fugiat minim velit minim dolor enim duis veniam
+                    ipsum anim magna sunt elit fore quem dolore labore illum
+                    veniam.
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+              <!-- End testimonial item -->
+
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <img
+                    src="assets/img/testimonials/testimonials-5.jpg"
+                    class="testimonial-img"
+                    alt=""
+                  />
+                  <h3>John Larson</h3>
+                  <h4>Entrepreneur</h4>
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i> Quis
+                    quorum aliqua sint quem legam fore sunt eram irure aliqua
+                    veniam tempor noster veniam enim culpa labore duis sunt
+                    culpa nulla illum cillum fugiat legam esse veniam culpa fore
+                    nisi cillum quid.
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+              <!-- End testimonial item -->
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+      <!-- End Testimonials Section -->
+
+      <!-- ======= About Section ======= -->
       <section id="about" class="about">
-        <div id="particles-js"></div>
         <div class="container" data-aos="fade-up">
           <div class="section-title">
             <h2>INDEX MASSA TUBUH</h2>
@@ -149,15 +383,12 @@
               meter kuadrat. IMT adalah indikator berat badan yang ideal.
             </p>
           </div>
+          <div></div>
+          <div id="particles-js"></div>
           <div class="row">
             <div class="col"></div>
             <div class="col" style="width: 50%">
-              <h3
-                class="text-center"
-                style="font-size: clamp(20px, 3vw, 100px)"
-              >
-                IMT &amp; PENJELASAN
-              </h3>
+              <h3 class="text-center cool-title">IMT &amp; PENJELASAN</h3>
               <hr />
             </div>
             <div class="col"></div>
@@ -218,7 +449,9 @@
         </div>
       </section>
       <!-- End About Section -->
+      
 
+      
       <!-- ======= TEKANAN DARAH ======= -->
       <section id="about" class="about">
         <div class="container" data-aos="fade-up">
@@ -233,12 +466,7 @@
           <div class="row">
             <div class="col"></div>
             <div class="col" style="width: 50%">
-              <h3
-                class="text-center"
-                style="font-size: clamp(20px, 3vw, 100px)"
-              >
-                IMT &amp; PENJELASAN
-              </h3>
+              <h3 class="text-center cool-title">IMT &amp; PENJELASAN</h3>
               <hr />
             </div>
             <div class="col"></div>
@@ -801,15 +1029,13 @@
       ><i class="bi bi-arrow-up-short"></i
     ></a>
 
-    <!-- Particle HTML -->
     <!-- particles.js container -->
-    <!-- stats - count particles -->
+  
+    
     <!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
     <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <!-- stats.js lib -->
     <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
-    <!-- Particle HTML End  -->
-
     <script src="particle.js"></script>
 
     <!-- Vendor JS Files -->
