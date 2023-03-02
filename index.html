@@ -64,7 +64,7 @@
       }
       .cool-text {
         color: rgb(36, 36, 36);
-        font-size: clamp(20px,10vw,20px);
+        font-size: clamp(20px, 10vw, 20px);
       }
     </style>
   </head>
@@ -166,7 +166,11 @@
         </li>
       </ul>
       <div id="particles-js"></div>
-      <div class="tab-content" id="myTabContent" style="width: 75%; margin: auto; padding-top: 3.5vh;">
+      <div
+        class="tab-content"
+        id="myTabContent"
+        style="width: 75%; margin: auto; padding-top: 3.5vh"
+      >
         <div
           class="tab-pane fade show active"
           id="home-tab-pane"
@@ -188,11 +192,7 @@
               <div class="row">
                 <div class="col"></div>
                 <div class="col" style="width: 50%">
-                  <h3
-                    class="text-center cool-text"
-                  >
-                    IMT
-                  </h3>
+                  <h3 class="text-center cool-text">IMT</h3>
                   <hr />
                 </div>
                 <div class="col"></div>
@@ -256,22 +256,84 @@
           aria-labelledby="profile-tab"
           tabindex="0"
         >
-        <div class="justify-content-center d-flex">
+          <div class="justify-content-center d-flex">
+            <div class="container" data-aos="fade-up">
+              <div class="section-title">
+                <h2>GULA DARAH</h2>
+                <p>
+                  Gula darah adalah kadar glukosa atau gula dalam darah
+                  seseorang. Gula darah normal sebelum makan adalah 70-99 mg/dl.
+                  Kadar gula darah yang terlalu tinggi atau terlalu rendah dapat
+                  menyebabkan gangguan kesehatan seperti diabetes dan
+                  hipoglikemia.
+                </p>
+              </div>
+              <div class="row">
+                <div class="col"></div>
+                <div class="col" style="width: 50%">
+                  <h3 class="text-center cool-text">GULA DARAH</h3>
+                  <hr />
+                </div>
+                <div class="col"></div>
+              </div>
+              <div class="row">
+                <div class="col-lg-4">
+                  <img src="assets/img/imt/imt.png" class="img-fluid" alt="" />
+                </div>
+                <div class="col-lg-4 pt-4 pt-lg-0 content">
+                  <p class="fst-italic text-center">
+                    Masukan Inputan yang benar agar tidak salah dalam
+                    penghitungan gula darah
+                  </p>
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="row">
+                        <div class="form-floating mb-3 col">
+                          <input
+                            type="number"
+                            id="gulaDarah"
+                            aria-label="First name"
+                            class="form-control"
+                            placeholder="."
+                          />
+
+                          <label for="gulaDarah" style="margin-left: 5px"
+                            >Kadar Gula Darah (mg/dL):</label
+                          >
+                        </div>
+                      </div>
+                      <div class="form-floating mb-3">
+                        <button onclick="cekGulaDarah()" class="cool-button">
+                          Cek
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="contact-tab-pane"
+          role="tabpanel"
+          aria-labelledby="contact-tab"
+          tabindex="0"
+        >
           <div class="container" data-aos="fade-up">
             <div class="section-title">
-              <h2>GULA DARAH</h2>
+              <h2>TEKANAN DARAH</h2>
               <p>
-                Gula darah adalah kadar glukosa atau gula dalam darah seseorang. Gula darah normal sebelum makan adalah 70-99 mg/dl. Kadar gula darah yang terlalu tinggi atau terlalu rendah dapat menyebabkan gangguan kesehatan seperti diabetes dan hipoglikemia.
+                Tekanan darah merupakan tekanan yang terjadi pada pembuluh darah
+                arteri ketika darah kita di pompa oleh jantung untuk di alirkan
+                ke seluruh anggota tubuh
               </p>
             </div>
             <div class="row">
               <div class="col"></div>
               <div class="col" style="width: 50%">
-                <h3
-                  class="text-center cool-text"
-                >
-                  GULA DARAH
-                </h3>
+                <h3 class="text-center cool-text">TEKANAN DARAH</h3>
                 <hr />
               </div>
               <div class="col"></div>
@@ -283,108 +345,53 @@
               <div class="col-lg-4 pt-4 pt-lg-0 content">
                 <p class="fst-italic text-center">
                   Masukan Inputan yang benar agar tidak salah dalam penghitungan
-                  gula darah
+                  IMT
                 </p>
                 <div class="row">
                   <div class="col-lg-12">
-                        <div class="row">
-                          <div class="form-floating mb-3 col">
-                            <input
-                              type="number"
-                              id="gulaDarah"
-                              aria-label="First name"
-                              class="form-control"
-                              placeholder="."
-                            />
-  
-                              <label for="gulaDarah" style="margin-left: 5px;">Kadar Gula Darah (mg/dL):</label>
-                          </div>
-                        </div>
-                        <div class="form-floating mb-3">
-                          <button onclick="cekGulaDarah()" class="cool-button">Cek</button>
-                        </div>
+                    <div class="row">
+                      <div class="form-floating mb-3 col">
+                        <input
+                          type="number"
+                          id="sistolik"
+                          aria-label="First name"
+                          class="form-control"
+                          placeholder="."
+                        />
+
+                        <label for="sistolik" style="margin-left: 5px"
+                          >Sistolik:</label
+                        >
+                      </div>
+
+                      <div class="form-floating mb-3">
+                        <input
+                          type="number"
+                          id="diastolik"
+                          aria-label="Last name"
+                          class="form-control"
+                          placeholder="."
+                        />
+                        <label for="diastolik" style="margin-left: 5px"
+                          >Diastolik:</label
+                        >
+                      </div>
+                    </div>
+                    <div class="form-floating mb-3">
+                      <button
+                        onclick="hitungTekananDarah()"
+                        class="cool-button"
+                      >
+                        Cek</button
+                      ><br /><br />
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="row">
-            </div>
           </div>
         </div>
-        </div>
-        <div
-          class="tab-pane fade"
-          id="contact-tab-pane"
-          role="tabpanel"
-          aria-labelledby="contact-tab"
-          tabindex="0"
-        >
-        <div class="container" data-aos="fade-up">
-          <div class="section-title">
-            <h2>TEKANAN DARAH</h2>
-            <p>
-              Tekanan darah merupakan tekanan yang terjadi pada pembuluh darah arteri ketika darah kita di pompa oleh jantung untuk di alirkan ke seluruh anggota tubuh
-            </p>
-          </div>
-          <div class="row">
-            <div class="col"></div>
-            <div class="col" style="width: 50%">
-              <h3
-                class="text-center cool-text"
-              >
-                TEKANAN DARAH  
-              </h3>
-              <hr />
-            </div>
-            <div class="col"></div>
-          </div>
-          <div class="row">
-            <div class="col-lg-4">
-              <img src="assets/img/imt/imt.png" class="img-fluid" alt="" />
-            </div>
-            <div class="col-lg-4 pt-4 pt-lg-0 content">
-              <p class="fst-italic text-center">
-                Masukan Inputan yang benar agar tidak salah dalam penghitungan
-                IMT
-              </p>
-              <div class="row">
-                <div class="col-lg-12">
-                      <div class="row">
-                        <div class="form-floating mb-3 col">
-                          <input
-                            type="number"
-                            id="sistolik"
-                            aria-label="First name"
-                            class="form-control"
-                            placeholder="."
-                          />
-
-                            <label for="sistolik" style="margin-left: 5px;">Sistolik:</label>
-                        </div>
-
-                        <div class="form-floating mb-3">
-                          <input
-                            type="number"
-                            id="diastolik"
-                            aria-label="Last name"
-                            class="form-control"
-                            placeholder="."
-                          />
-                          <label for="diastolik" style="margin-left: 5px;">Diastolik:</label>
-                        </div>
-                      </div>
-                      <div class="form-floating mb-3">
-                    <button onclick="hitungTekananDarah()" class="cool-button">Cek</button><br><br>
-                      </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-
-          </div>
-        </div>
-        </div>
+      </div>
 
       <!-- <div class="row" style="margin: auto; width: 75%">
         <ul
@@ -620,12 +627,11 @@
       </div> -->
 
       <!-- ======= About Section ======= -->
-      
-        <div class="row">
-          <span class="text-center cool-text" id="hasil"></span>
-          <span class="text-center cool-text" id="penjelasan"></span>
-        </div>
-      
+
+      <div class="row">
+        <span class="text-center cool-text" id="hasil"></span>
+        <span class="text-center cool-text" id="penjelasan"></span>
+      </div>
 
       <!-- End About Section -->
 
