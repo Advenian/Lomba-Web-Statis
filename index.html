@@ -268,8 +268,8 @@
 
       <section id="app">
         <ul
-          class="nav nav-tabs d-flex justify-content-center"
-          style="width: 50%; margin: auto"
+        class="nav nav-pills nav-fill d-flex justify-content-center"
+        style="width: 60%; margin: auto"
           id="myTab"
           role="tablist"
         >
@@ -284,7 +284,7 @@
               aria-controls="home-tab-pane"
               aria-selected="true"
             >
-              <b>IMT</b>
+            <div style="width: 100px; margin: auto"><b>IMT</b></div>
             </button>
           </li>
           <li class="nav-item" role="presentation">
@@ -298,7 +298,7 @@
               aria-controls="profile-tab-pane"
               aria-selected="false"
             >
-              <b>Gula Darah</b>
+            <div style="width: 100px; margin: auto"><b>Gula Darah</b></div>
             </button>
           </li>
           <li class="nav-item" role="presentation">
@@ -312,300 +312,51 @@
               aria-controls="contact-tab-pane"
               aria-selected="false"
             >
-              <b>Tekanan Darah</b>
+            <div style="width: 100px; margin: auto"><b>Tekanan Darah</b></div>
             </button>
           </li>
         </ul>
-
+        <div id="particles-js"></div>
+        <div class="glaz mt-4">
+          
         <div
-          class="tab-content"
-          id="myTabContent"
-          style="width: 75%; margin: auto; padding-top: 3.5vh"
+        class="tab-content"
+        id="myTabContent"
+        style="width: 75%; margin: auto; padding-top: 3.5vh"
+      >
+        <div
+          class="tab-pane fade show active"
+          id="imt"
+          role="tabpanel"
+          aria-labelledby="home-tab"
+          tabindex="0"
         >
-          <div
-            class="tab-pane fade show active"
-            id="imt"
-            role="tabpanel"
-            aria-labelledby="home-tab"
-            tabindex="0"
-          >
-            <div class="justify-content-center d-flex">
-              <div class="container" data-aos="fade-up">
-                <div class="section-title">
-                  <h2>INDEX MASSA TUBUH</h2>
-                  <p>
-                    Indeks Massa Tubuh (IMT) adalah indeks yang membandingkan
-                    berat badan dan tinggi badan dalam kilogram dibagi tinggi
-                    badan dalam meter kuadrat. IMT adalah indikator berat badan
-                    yang ideal.
-                  </p>
-                </div>
-                <div class="row">
-                  <div class="col"></div>
-                  <div class="col" style="width: 50%">
-                    <h3 class="text-center cool-text">IMT</h3>
-                    <hr />
-                  </div>
-                  <div class="col"></div>
-                </div>
-                <div class="row">
-                  <div class="col-lg-4">
-                    <img
-                      src="assets/img/imt/imt.png"
-                      class="img-fluid"
-                      alt=""
-                    />
-                  </div>
-                  <div class="col-lg-4 pt-4 pt-lg-0 content">
-                    <p class="fst-italic text-center">
-                      Masukan Inputan yang benar agar tidak salah dalam
-                      penghitungan IMT
-                    </p>
-                    <div class="row">
-                      <div class="col-lg-12">
-                        <div class="row">
-                          <div class="form-floating mb-3 col">
-                            <input
-                              type="number"
-                              id="berat-badan"
-                              aria-label="First name"
-                              class="form-control"
-                              placeholder="."
-                            />
-
-                            <label for="berat-badan" style="margin-left: 5px"
-                              >Berat Badan (kg):</label
-                            >
-                          </div>
-
-                          <div class="form-floating mb-3">
-                            <input
-                              type="number"
-                              id="tinggi-badan"
-                              aria-label="Last name"
-                              class="form-control"
-                              placeholder="."
-                            />
-                            <label for="tinggi-badan" style="margin-left: 5px"
-                              >Tinggi Badan (cm):</label
-                            >
-                          </div>
-                        </div>
-
-                        <div class="form-floating mb-3">
-                          <button onclick="hitungBMI()" id="imt_muncul" class="cool-button">
-                            Cek
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    
-                      
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- ======= Facts Section ======= -->
-            <div id="imt_hasil" class="facts" style="display: none;">
-              <div class="container" data-aos="fade-up">
-                  <div class="section-title">
-                      <h2>Hasil</h2>
-                      <p class="cool-text text-center" id="hasil_imt"></p>
-                  </div>
-
-
-                  <div class="row">
-                      <div class="col-lg-2 ">
-                          <div class="count-box">
-                              <i class="bi bi-emoji-smile"></i>
-                              <h4>Saran 1</h4>
-                          </div>
-                      </div>
-
-                      <p class="col-lg-10" id="saran1_imt"></p>
-                  </div>
-                  <hr>
-
-                  <div class="row">
-                      <div class="col-lg-2">
-                          <div class="count-box">
-                              <i class="bi bi-journal-richtext"></i>
-                              <h4>Saran 2</h4>
-                          </div>
-                      </div>
-                      <p class="col-lg-10" id="saran2_imt"></p>
-                  </div><hr>
-
-                  <div class="row">
-                      <div class="col-lg-2">
-                          <div class="count-box">
-                              <i class="bi bi-headset"></i>
-                              <h4>Saran 3</h4>
-                          </div>
-                      </div>
-                      <p class="col-lg-10" id="saran3_imt"></p>
-                  </div><hr>
-
-                  <div class="row">
-                      <div class="col-lg-2">
-                          <div class="count-box">
-                              <i class="bi bi-award"></i>
-                              <h4>Saran 4</h4>
-                          </div>
-                      </div>
-                      <p class="col-lg-10" id="saran4_imt"></p>
-                  </div>
-              </div>
-          </div>
-          </div>
-          <div
-            class="tab-pane fade"
-            id="gula"
-            role="tabpanel"
-            aria-labelledby="profile-tab"
-            tabindex="0"
-          >
-            <div class="justify-content-center d-flex">
-              <div class="container" data-aos="fade-up">
-                <div class="section-title">
-                  <h2>GULA DARAH</h2>
-                  <p>
-                    Gula darah adalah kadar glukosa atau gula dalam darah
-                    seseorang. Gula darah normal sebelum makan adalah 70-99
-                    mg/dl. Kadar gula darah yang terlalu tinggi atau terlalu
-                    rendah dapat menyebabkan gangguan kesehatan seperti diabetes
-                    dan hipoglikemia.
-                  </p>
-                </div>
-                <div class="row">
-                  <div class="col"></div>
-                  <div class="col" style="width: 50%">
-                    <h3 class="text-center cool-text">GULA DARAH</h3>
-                    <hr />
-                  </div>
-                  <div class="col"></div>
-                </div>
-                <div class="row">
-                  <div class="col-lg-4">
-                    <img
-                      src="assets/img/imt/imt.png"
-                      class="img-fluid"
-                      alt=""
-                    />
-                  </div>
-                  <div class="col-lg-4 pt-4 pt-lg-0 content">
-                    <p class="fst-italic text-center">
-                      Masukan Inputan yang benar agar tidak salah dalam
-                      penghitungan gula darah
-                    </p>
-                    <div class="row">
-                      <div class="col-lg-12">
-                        <div class="row">
-                          <div class="form-floating mb-3 col">
-                            <input
-                              type="number"
-                              id="gulaDarah"
-                              aria-label="First name"
-                              class="form-control"
-                              placeholder="."
-                            />
-
-                            <label for="gulaDarah" style="margin-left: 5px"
-                              >Kadar Gula Darah (mg/dL):</label
-                            >
-                          </div>
-                        </div>
-                        <div class="form-floating mb-3">
-                          <button onclick="cekGulaDarah()" id="gula_muncul" class="cool-button">
-                            Cek
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- ======= Facts Section ======= -->
-            <div id="gula_hasil" class="facts" style="display: none;">
-              <div class="container" data-aos="fade-up">
-                  <div class="section-title">
-                      <h2>Hasil</h2>
-                      <p class="cool-text text-center" id="hasil_gula"></p>
-                  </div>
-
-
-                  <div class="row">
-                      <div class="col-lg-2 ">
-                          <div class="count-box">
-                              <i class="bi bi-emoji-smile"></i>
-                              <h4>Saran 1</h4>
-                          </div>
-                      </div>
-
-                      <p class="col-lg-10" id="saran1_gula"></p>
-                  </div>
-                  <hr>
-
-                  <div class="row">
-                      <div class="col-lg-2">
-                          <div class="count-box">
-                              <i class="bi bi-journal-richtext"></i>
-                              <h4>Saran 2</h4>
-                          </div>
-                      </div>
-                      <p class="col-lg-10" id="saran2_gula"></p>
-                  </div><hr>
-
-                  <div class="row">
-                      <div class="col-lg-2">
-                          <div class="count-box">
-                              <i class="bi bi-headset"></i>
-                              <h4>Saran 3</h4>
-                          </div>
-                      </div>
-                      <p class="col-lg-10" id="saran3_gula"></p>
-                  </div><hr>
-
-                  <div class="row">
-                      <div class="col-lg-2">
-                          <div class="count-box">
-                              <i class="bi bi-award"></i>
-                              <h4>Saran 4</h4>
-                          </div>
-                      </div>
-                      <p class="col-lg-10" id="saran4_gula"></p>
-                  </div>
-              </div>
-          </div>
-          </div>
-          <div
-            class="tab-pane fade"
-            id="tekanan_darah"
-            role="tabpanel"
-            aria-labelledby="contact-tab"
-            tabindex="0"
-          >
+          <div class="justify-content-center d-flex">
             <div class="container" data-aos="fade-up">
               <div class="section-title">
-                <h2>TEKANAN DARAH</h2>
+                <h2>INDEX MASSA TUBUH</h2>
                 <p>
-                  Tekanan darah merupakan tekanan yang terjadi pada pembuluh
-                  darah arteri ketika darah kita di pompa oleh jantung untuk di
-                  alirkan ke seluruh anggota tubuh
+                  Indeks Massa Tubuh (IMT) adalah indeks yang membandingkan
+                  berat badan dan tinggi badan dalam kilogram dibagi tinggi
+                  badan dalam meter kuadrat. IMT adalah indikator berat badan
+                  yang ideal.
                 </p>
               </div>
               <div class="row">
                 <div class="col"></div>
                 <div class="col" style="width: 50%">
-                  <h3 class="text-center cool-text">TEKANAN DARAH</h3>
+                  <h3 class="text-center cool-text">IMT</h3>
                   <hr />
                 </div>
                 <div class="col"></div>
               </div>
               <div class="row">
                 <div class="col-lg-4">
-                  <img src="assets/img/imt/imt.png" class="img-fluid" alt="" />
+                  <img
+                    src="assets/img/imt/imt.png"
+                    class="img-fluid"
+                    alt=""
+                  />
                 </div>
                 <div class="col-lg-4 pt-4 pt-lg-0 content">
                   <p class="fst-italic text-center">
@@ -618,49 +369,50 @@
                         <div class="form-floating mb-3 col">
                           <input
                             type="number"
-                            id="sistolik"
+                            id="berat-badan"
                             aria-label="First name"
                             class="form-control"
                             placeholder="."
                           />
 
-                          <label for="sistolik" style="margin-left: 5px"
-                            >Sistolik:</label
+                          <label for="berat-badan" style="margin-left: 5px"
+                            >Berat Badan (kg):</label
                           >
                         </div>
 
                         <div class="form-floating mb-3">
                           <input
                             type="number"
-                            id="diastolik"
+                            id="tinggi-badan"
                             aria-label="Last name"
                             class="form-control"
                             placeholder="."
                           />
-                          <label for="diastolik" style="margin-left: 5px"
-                            >Diastolik:</label
+                          <label for="tinggi-badan" style="margin-left: 5px"
+                            >Tinggi Badan (cm):</label
                           >
                         </div>
                       </div>
+
                       <div class="form-floating mb-3">
-                        <button
-                          onclick="hitungTekananDarah()"
-                          id="tekanan_darah_muncul"
-                          class="cool-button"
-                        >
-                          Cek</button
-                        ><br /><br />
+                        <button onclick="hitungBMI()" id="imt_muncul" class="cool-button">
+                          Cek
+                        </button>
                       </div>
                     </div>
                   </div>
+                  
+                    
                 </div>
               </div>
             </div>
-            <!-- ======= Facts Section ======= -->
-            <div class="container facts" data-aos="fade-up" id="tekanan_darah_hasil" style="display: none;">
+          </div>
+          <!-- ======= Facts Section ======= -->
+          <div id="imt_hasil" class="facts" style="display: none;">
+            <div class="container" data-aos="fade-up">
                 <div class="section-title">
                     <h2>Hasil</h2>
-                    <p class="cool-text text-center" id="hasil_tekanan_darah"></p>
+                    <p class="cool-text text-center" id="hasil_imt"></p>
                 </div>
 
 
@@ -672,7 +424,7 @@
                         </div>
                     </div>
 
-                    <p class="col-lg-10" id="saran1_tekanan_darah"></p>
+                    <p class="col-lg-10" id="saran1_imt"></p>
                 </div>
                 <hr>
 
@@ -683,9 +435,8 @@
                             <h4>Saran 2</h4>
                         </div>
                     </div>
-                    <p class="col-lg-10" id="saran2_tekanan_darah"></p>
-                </div>
-                <hr>
+                    <p class="col-lg-10" id="saran2_imt"></p>
+                </div><hr>
 
                 <div class="row">
                     <div class="col-lg-2">
@@ -694,9 +445,8 @@
                             <h4>Saran 3</h4>
                         </div>
                     </div>
-                    <p class="col-lg-10" id="saran3_tekanan_darah"></p>
-                </div>
-                <hr>
+                    <p class="col-lg-10" id="saran3_imt"></p>
+                </div><hr>
 
                 <div class="row">
                     <div class="col-lg-2">
@@ -705,11 +455,264 @@
                             <h4>Saran 4</h4>
                         </div>
                     </div>
-                    <p class="col-lg-10" id="saran4_tekanan_darah"></p>
+                    <p class="col-lg-10" id="saran4_imt"></p>
                 </div>
             </div>
+          </div>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="gula"
+          role="tabpanel"
+          aria-labelledby="profile-tab"
+          tabindex="0"
+        >
+          <div class="justify-content-center d-flex">
+            <div class="container" data-aos="fade-up">
+              <div class="section-title">
+                <h2>GULA DARAH</h2>
+                <p>
+                  Gula darah adalah kadar glukosa atau gula dalam darah
+                  seseorang. Gula darah normal sebelum makan adalah 70-99
+                  mg/dl. Kadar gula darah yang terlalu tinggi atau terlalu
+                  rendah dapat menyebabkan gangguan kesehatan seperti diabetes
+                  dan hipoglikemia.
+                </p>
+              </div>
+              <div class="row">
+                <div class="col"></div>
+                <div class="col" style="width: 50%">
+                  <h3 class="text-center cool-text">GULA DARAH</h3>
+                  <hr />
+                </div>
+                <div class="col"></div>
+              </div>
+              <div class="row">
+                <div class="col-lg-4">
+                  <img
+                    src="assets/img/imt/imt.png"
+                    class="img-fluid"
+                    alt=""
+                  />
+                </div>
+                <div class="col-lg-4 pt-4 pt-lg-0 content">
+                  <p class="fst-italic text-center">
+                    Masukan Inputan yang benar agar tidak salah dalam
+                    penghitungan gula darah
+                  </p>
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="row">
+                        <div class="form-floating mb-3 col">
+                          <input
+                            type="number"
+                            id="gulaDarah"
+                            aria-label="First name"
+                            class="form-control"
+                            placeholder="."
+                          />
+
+                          <label for="gulaDarah" style="margin-left: 5px"
+                            >Kadar Gula Darah (mg/dL):</label
+                          >
+                        </div>
+                      </div>
+                      <div class="form-floating mb-3">
+                        <button onclick="cekGulaDarah()" id="gula_muncul" class="cool-button">
+                          Cek
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          
+          <!-- ======= Facts Section ======= -->
+          <div id="gula_hasil" class="facts" style="display: none;">
+            <div class="container" data-aos="fade-up">
+                <div class="section-title">
+                    <h2>Hasil</h2>
+                    <p class="cool-text text-center" id="hasil_gula"></p>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-lg-2 ">
+                        <div class="count-box">
+                            <i class="bi bi-emoji-smile"></i>
+                            <h4>Saran 1</h4>
+                        </div>
+                    </div>
+
+                    <p class="col-lg-10" id="saran1_gula"></p>
+                </div>
+                <hr>
+
+                <div class="row">
+                    <div class="col-lg-2">
+                        <div class="count-box">
+                            <i class="bi bi-journal-richtext"></i>
+                            <h4>Saran 2</h4>
+                        </div>
+                    </div>
+                    <p class="col-lg-10" id="saran2_gula"></p>
+                </div><hr>
+
+                <div class="row">
+                    <div class="col-lg-2">
+                        <div class="count-box">
+                            <i class="bi bi-headset"></i>
+                            <h4>Saran 3</h4>
+                        </div>
+                    </div>
+                    <p class="col-lg-10" id="saran3_gula"></p>
+                </div><hr>
+
+                <div class="row">
+                    <div class="col-lg-2">
+                        <div class="count-box">
+                            <i class="bi bi-award"></i>
+                            <h4>Saran 4</h4>
+                        </div>
+                    </div>
+                    <p class="col-lg-10" id="saran4_gula"></p>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="tekanan_darah"
+          role="tabpanel"
+          aria-labelledby="contact-tab"
+          tabindex="0"
+        >
+          <div class="container" data-aos="fade-up">
+            <div class="section-title">
+              <h2>TEKANAN DARAH</h2>
+              <p>
+                Tekanan darah merupakan tekanan yang terjadi pada pembuluh
+                darah arteri ketika darah kita di pompa oleh jantung untuk di
+                alirkan ke seluruh anggota tubuh
+              </p>
+            </div>
+            <div class="row">
+              <div class="col"></div>
+              <div class="col" style="width: 50%">
+                <h3 class="text-center cool-text">TEKANAN DARAH</h3>
+                <hr />
+              </div>
+              <div class="col"></div>
+            </div>
+            <div class="row">
+              <div class="col-lg-4">
+                <img src="assets/img/imt/imt.png" class="img-fluid" alt="" />
+              </div>
+              <div class="col-lg-4 pt-4 pt-lg-0 content">
+                <p class="fst-italic text-center">
+                  Masukan Inputan yang benar agar tidak salah dalam
+                  penghitungan IMT
+                </p>
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="row">
+                      <div class="form-floating mb-3 col">
+                        <input
+                          type="number"
+                          id="sistolik"
+                          aria-label="First name"
+                          class="form-control"
+                          placeholder="."
+                        />
+
+                        <label for="sistolik" style="margin-left: 5px"
+                          >Sistolik:</label
+                        >
+                      </div>
+
+                      <div class="form-floating mb-3">
+                        <input
+                          type="number"
+                          id="diastolik"
+                          aria-label="Last name"
+                          class="form-control"
+                          placeholder="."
+                        />
+                        <label for="diastolik" style="margin-left: 5px"
+                          >Diastolik:</label
+                        >
+                      </div>
+                    </div>
+                    <div class="form-floating mb-3">
+                      <button
+                        onclick="hitungTekananDarah()"
+                        id="tekanan_darah_muncul"
+                        class="cool-button"
+                      >
+                        Cek</button
+                      ><br /><br />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ======= Facts Section ======= -->
+          <div class="container facts" data-aos="fade-up" id="tekanan_darah_hasil" style="display: none;">
+              <div class="section-title">
+                  <h2>Hasil</h2>
+                  <p class="cool-text text-center" id="hasil_tekanan_darah"></p>
+              </div>
+
+
+              <div class="row">
+                  <div class="col-lg-2 ">
+                      <div class="count-box">
+                          <i class="bi bi-emoji-smile"></i>
+                          <h4>Saran 1</h4>
+                      </div>
+                  </div>
+
+                  <p class="col-lg-10" id="saran1_tekanan_darah"></p>
+              </div>
+              <hr>
+
+              <div class="row">
+                  <div class="col-lg-2">
+                      <div class="count-box">
+                          <i class="bi bi-journal-richtext"></i>
+                          <h4>Saran 2</h4>
+                      </div>
+                  </div>
+                  <p class="col-lg-10" id="saran2_tekanan_darah"></p>
+              </div>
+              <hr>
+
+              <div class="row">
+                  <div class="col-lg-2">
+                      <div class="count-box">
+                          <i class="bi bi-headset"></i>
+                          <h4>Saran 3</h4>
+                      </div>
+                  </div>
+                  <p class="col-lg-10" id="saran3_tekanan_darah"></p>
+              </div>
+              <hr>
+
+              <div class="row">
+                  <div class="col-lg-2">
+                      <div class="count-box">
+                          <i class="bi bi-award"></i>
+                          <h4>Saran 4</h4>
+                      </div>
+                  </div>
+                  <p class="col-lg-10" id="saran4_tekanan_darah"></p>
+              </div>
+          </div>
+        </div>
+        
+      </div>
         </div>
       </section>
       <!-- End About Section -->
@@ -906,7 +909,7 @@
       <section>
         <div>
           <ul
-            class="nav nav-pills nav-fill d-flex justify-content-center"
+            class="nav nav-pills d-flex justify-content-center"
             style="width: 50%; margin: auto"
             id="myTab"
             role="tablist"
