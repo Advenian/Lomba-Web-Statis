@@ -38,6 +38,7 @@
 
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/scroll.css">
 
     <style>
       .cool-button {
@@ -51,6 +52,7 @@
         padding-right: 16px;
         transition: 250ms ease;
       }
+
       .cool-button:hover {
         border-color: transparent;
         border-radius: 30px;
@@ -62,6 +64,7 @@
         padding-right: 16px;
         transition: 250ms ease;
       }
+
       .cool-text {
         color: rgb(36, 36, 36);
         font-size: 15px;
@@ -83,13 +86,13 @@
             >
           </li>
           <li>
-            <a href="#about" class="nav-link scrollto"
-              ><i class="bx bx-user"></i> <span>About</span></a
+            <a href="#app" class="nav-link scrollto"
+              ><i class="bx bx-user"></i> <span>app</span></a
             >
           </li>
           <li>
-            <a href="#resume" class="nav-link scrollto"
-              ><i class="bx bx-file-blank"></i> <span>Resume</span></a
+            <a href="#services" class="nav-link scrollto"
+              ><i class="bx bx-file-blank"></i> <span>kesimpulan</span></a
             >
           </li>
           <li>
@@ -98,15 +101,15 @@
             >
           </li>
           <li>
-            <a href="#services" class="nav-link scrollto"
-              ><i class="bx bx-server"></i> <span>Services</span></a
+            <a href="#contact" class="nav-link scrollto"
+              ><i class="bx bx-server"></i> <span>contact</span></a
             >
           </li>
-          <li>
+<!--           <li>
             <a href="#contact" class="nav-link scrollto"
               ><i class="bx bx-envelope"></i> <span>Contact</span></a
             >
-          </li>
+          </li> -->
         </ul>
       </nav>
       <!-- .nav-menu -->
@@ -138,84 +141,339 @@
     <main id="main">
       <!-- ======= About Section ======= -->
 
-      <section>
+      <section id="app">
         <ul
-        class="nav nav-tabs d-flex justify-content-center"
-        style="width: 50%; margin: auto"
-        id="myTab"
-        role="tablist"
-      >
-        <li class="nav-item" role="presentation">
-          <button
-            class="nav-link active"
-            id="home-tab"
-            data-bs-toggle="tab"
-            data-bs-target="#home-tab-pane"
-            type="button"
-            role="tab"
-            aria-controls="home-tab-pane"
-            aria-selected="true"
-          >
-            <b>IMT</b>
-          </button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button
-            class="nav-link"
-            id="profile-tab"
-            data-bs-toggle="tab"
-            data-bs-target="#profile-tab-pane"
-            type="button"
-            role="tab"
-            aria-controls="profile-tab-pane"
-            aria-selected="false"
-          >
-            <b>Gula Darah</b>
-          </button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button
-            class="nav-link"
-            id="contact-tab"
-            data-bs-toggle="tab"
-            data-bs-target="#contact-tab-pane"
-            type="button"
-            role="tab"
-            aria-controls="contact-tab-pane"
-            aria-selected="false"
-          >
-            <b>Tekanan Darah</b>
-          </button>
-        </li>
-      </ul>
-      <div id="particles-js"></div>
-      <div
-        class="tab-content"
-        id="myTabContent"
-        style="width: 75%; margin: auto; padding-top: 3.5vh"
-      >
-        <div
-          class="tab-pane fade show active"
-          id="home-tab-pane"
-          role="tabpanel"
-          aria-labelledby="home-tab"
-          tabindex="0"
+          class="nav nav-tabs d-flex justify-content-center"
+          style="width: 50%; margin: auto"
+          id="myTab"
+          role="tablist"
         >
-          <div class="justify-content-center d-flex">
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active"
+              id="home-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#imt"
+              type="button"
+              role="tab"
+              aria-controls="home-tab-pane"
+              aria-selected="true"
+            >
+              <b>IMT</b>
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="profile-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#gula"
+              type="button"
+              role="tab"
+              aria-controls="profile-tab-pane"
+              aria-selected="false"
+            >
+              <b>Gula Darah</b>
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="contact-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#tekanan_darah"
+              type="button"
+              role="tab"
+              aria-controls="contact-tab-pane"
+              aria-selected="false"
+            >
+              <b>Tekanan Darah</b>
+            </button>
+          </li>
+        </ul>
+
+        <div
+          class="tab-content"
+          id="myTabContent"
+          style="width: 75%; margin: auto; padding-top: 3.5vh"
+        >
+          <div
+            class="tab-pane fade show active"
+            id="imt"
+            role="tabpanel"
+            aria-labelledby="home-tab"
+            tabindex="0"
+          >
+            <div class="justify-content-center d-flex">
+              <div class="container" data-aos="fade-up">
+                <div class="section-title">
+                  <h2>INDEX MASSA TUBUH</h2>
+                  <p>
+                    Indeks Massa Tubuh (IMT) adalah indeks yang membandingkan
+                    berat badan dan tinggi badan dalam kilogram dibagi tinggi
+                    badan dalam meter kuadrat. IMT adalah indikator berat badan
+                    yang ideal.
+                  </p>
+                </div>
+                <div class="row">
+                  <div class="col"></div>
+                  <div class="col" style="width: 50%">
+                    <h3 class="text-center cool-text">IMT</h3>
+                    <hr />
+                  </div>
+                  <div class="col"></div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-4">
+                    <img
+                      src="assets/img/imt/imt.png"
+                      class="img-fluid"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col-lg-4 pt-4 pt-lg-0 content">
+                    <p class="fst-italic text-center">
+                      Masukan Inputan yang benar agar tidak salah dalam
+                      penghitungan IMT
+                    </p>
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <div class="row">
+                          <div class="form-floating mb-3 col">
+                            <input
+                              type="number"
+                              id="berat-badan"
+                              aria-label="First name"
+                              class="form-control"
+                              placeholder="."
+                            />
+
+                            <label for="berat-badan" style="margin-left: 5px"
+                              >Berat Badan (kg):</label
+                            >
+                          </div>
+
+                          <div class="form-floating mb-3">
+                            <input
+                              type="number"
+                              id="tinggi-badan"
+                              aria-label="Last name"
+                              class="form-control"
+                              placeholder="."
+                            />
+                            <label for="tinggi-badan" style="margin-left: 5px"
+                              >Tinggi Badan (cm):</label
+                            >
+                          </div>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                          <button onclick="hitungBMI()" id="imt_muncul" class="cool-button">
+                            Cek
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    
+                      
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- ======= Facts Section ======= -->
+            <div id="imt_hasil" class="facts" style="display: none;">
+              <div class="container" data-aos="fade-up">
+                  <div class="section-title">
+                      <h2>Hasil</h2>
+                      <p class="cool-text text-center" id="hasil_imt"></p>
+                  </div>
+
+
+                  <div class="row">
+                      <div class="col-lg-2 ">
+                          <div class="count-box">
+                              <i class="bi bi-emoji-smile"></i>
+                              <h4>Saran 1</h4>
+                          </div>
+                      </div>
+
+                      <p class="col-lg-10" id="saran1_imt"></p>
+                  </div>
+                  <hr>
+
+                  <div class="row">
+                      <div class="col-lg-2">
+                          <div class="count-box">
+                              <i class="bi bi-journal-richtext"></i>
+                              <h4>Saran 2</h4>
+                          </div>
+                      </div>
+                      <p class="col-lg-10" id="saran2_imt"></p>
+                  </div><hr>
+
+                  <div class="row">
+                      <div class="col-lg-2">
+                          <div class="count-box">
+                              <i class="bi bi-headset"></i>
+                              <h4>Saran 3</h4>
+                          </div>
+                      </div>
+                      <p class="col-lg-10" id="saran3_imt"></p>
+                  </div><hr>
+
+                  <div class="row">
+                      <div class="col-lg-2">
+                          <div class="count-box">
+                              <i class="bi bi-award"></i>
+                              <h4>Saran 4</h4>
+                          </div>
+                      </div>
+                      <p class="col-lg-10" id="saran4_imt"></p>
+                  </div>
+              </div>
+          </div>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="gula"
+            role="tabpanel"
+            aria-labelledby="profile-tab"
+            tabindex="0"
+          >
+            <div class="justify-content-center d-flex">
+              <div class="container" data-aos="fade-up">
+                <div class="section-title">
+                  <h2>GULA DARAH</h2>
+                  <p>
+                    Gula darah adalah kadar glukosa atau gula dalam darah
+                    seseorang. Gula darah normal sebelum makan adalah 70-99
+                    mg/dl. Kadar gula darah yang terlalu tinggi atau terlalu
+                    rendah dapat menyebabkan gangguan kesehatan seperti diabetes
+                    dan hipoglikemia.
+                  </p>
+                </div>
+                <div class="row">
+                  <div class="col"></div>
+                  <div class="col" style="width: 50%">
+                    <h3 class="text-center cool-text">GULA DARAH</h3>
+                    <hr />
+                  </div>
+                  <div class="col"></div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-4">
+                    <img
+                      src="assets/img/imt/imt.png"
+                      class="img-fluid"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col-lg-4 pt-4 pt-lg-0 content">
+                    <p class="fst-italic text-center">
+                      Masukan Inputan yang benar agar tidak salah dalam
+                      penghitungan gula darah
+                    </p>
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <div class="row">
+                          <div class="form-floating mb-3 col">
+                            <input
+                              type="number"
+                              id="gulaDarah"
+                              aria-label="First name"
+                              class="form-control"
+                              placeholder="."
+                            />
+
+                            <label for="gulaDarah" style="margin-left: 5px"
+                              >Kadar Gula Darah (mg/dL):</label
+                            >
+                          </div>
+                        </div>
+                        <div class="form-floating mb-3">
+                          <button onclick="cekGulaDarah()" id="gula_muncul" class="cool-button">
+                            Cek
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- ======= Facts Section ======= -->
+            <div id="gula_hasil" class="facts" style="display: none;">
+              <div class="container" data-aos="fade-up">
+                  <div class="section-title">
+                      <h2>Hasil</h2>
+                      <p class="cool-text text-center" id="hasil_gula"></p>
+                  </div>
+
+
+                  <div class="row">
+                      <div class="col-lg-2 ">
+                          <div class="count-box">
+                              <i class="bi bi-emoji-smile"></i>
+                              <h4>Saran 1</h4>
+                          </div>
+                      </div>
+
+                      <p class="col-lg-10" id="saran1_gula"></p>
+                  </div>
+                  <hr>
+
+                  <div class="row">
+                      <div class="col-lg-2">
+                          <div class="count-box">
+                              <i class="bi bi-journal-richtext"></i>
+                              <h4>Saran 2</h4>
+                          </div>
+                      </div>
+                      <p class="col-lg-10" id="saran2_gula"></p>
+                  </div><hr>
+
+                  <div class="row">
+                      <div class="col-lg-2">
+                          <div class="count-box">
+                              <i class="bi bi-headset"></i>
+                              <h4>Saran 3</h4>
+                          </div>
+                      </div>
+                      <p class="col-lg-10" id="saran3_gula"></p>
+                  </div><hr>
+
+                  <div class="row">
+                      <div class="col-lg-2">
+                          <div class="count-box">
+                              <i class="bi bi-award"></i>
+                              <h4>Saran 4</h4>
+                          </div>
+                      </div>
+                      <p class="col-lg-10" id="saran4_gula"></p>
+                  </div>
+              </div>
+          </div>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="tekanan_darah"
+            role="tabpanel"
+            aria-labelledby="contact-tab"
+            tabindex="0"
+          >
             <div class="container" data-aos="fade-up">
               <div class="section-title">
-                <h2>INDEX MASSA TUBUH</h2>
+                <h2>TEKANAN DARAH</h2>
                 <p>
-                  Indeks Massa Tubuh (IMT) adalah indeks yang membandingkan
-                  berat badan dan tinggi badan dalam kilogram dibagi tinggi
-                  badan dalam meter kuadrat. IMT adalah indikator berat badan
-                  yang ideal.
+                  Tekanan darah merupakan tekanan yang terjadi pada pembuluh
+                  darah arteri ketika darah kita di pompa oleh jantung untuk di
+                  alirkan ke seluruh anggota tubuh
                 </p>
               </div>
               <div class="row">
                 <div class="col"></div>
                 <div class="col" style="width: 50%">
-                  <h3 class="text-center cool-text">IMT</h3>
+                  <h3 class="text-center cool-text">TEKANAN DARAH</h3>
                   <hr />
                 </div>
                 <div class="col"></div>
@@ -235,249 +493,108 @@
                         <div class="form-floating mb-3 col">
                           <input
                             type="number"
-                            id="berat-badan"
+                            id="sistolik"
                             aria-label="First name"
                             class="form-control"
                             placeholder="."
                           />
 
-                          <label for="berat-badan" style="margin-left: 5px"
-                            >Berat Badan (kg):</label
+                          <label for="sistolik" style="margin-left: 5px"
+                            >Sistolik:</label
                           >
                         </div>
 
                         <div class="form-floating mb-3">
                           <input
                             type="number"
-                            id="tinggi-badan"
+                            id="diastolik"
                             aria-label="Last name"
                             class="form-control"
                             placeholder="."
                           />
-                          <label for="tinggi-badan" style="margin-left: 5px"
-                            >Tinggi Badan (cm):</label
+                          <label for="diastolik" style="margin-left: 5px"
+                            >Diastolik:</label
                           >
                         </div>
                       </div>
-
                       <div class="form-floating mb-3">
-                        <button onclick="hitungBMI()" class="cool-button">
-                          Cek
-                        </button>
+                        <button
+                          onclick="hitungTekananDarah()"
+                          id="tekanan_darah_muncul"
+                          class="cool-button"
+                        >
+                          Cek</button
+                        ><br /><br />
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div
-          class="tab-pane fade"
-          id="profile-tab-pane"
-          role="tabpanel"
-          aria-labelledby="profile-tab"
-          tabindex="0"
-        >
-          <div class="justify-content-center d-flex">
-            <div class="container" data-aos="fade-up">
-              <div class="section-title">
-                <h2>GULA DARAH</h2>
-                <p>
-                  Gula darah adalah kadar glukosa atau gula dalam darah
-                  seseorang. Gula darah normal sebelum makan adalah 70-99 mg/dl.
-                  Kadar gula darah yang terlalu tinggi atau terlalu rendah dapat
-                  menyebabkan gangguan kesehatan seperti diabetes dan
-                  hipoglikemia.
-                </p>
-              </div>
-              <div class="row">
-                <div class="col"></div>
-                <div class="col" style="width: 50%">
-                  <h3 class="text-center cool-text">GULA DARAH</h3>
-                  <hr />
+            <!-- ======= Facts Section ======= -->
+            <div class="container facts" data-aos="fade-up" id="tekanan_darah_hasil" style="display: none;">
+                <div class="section-title">
+                    <h2>Hasil</h2>
+                    <p class="cool-text text-center" id="hasil_tekanan_darah"></p>
                 </div>
-                <div class="col"></div>
-              </div>
-              <div class="row">
-                <div class="col-lg-4">
-                  <img src="assets/img/imt/imt.png" class="img-fluid" alt="" />
-                </div>
-                <div class="col-lg-4 pt-4 pt-lg-0 content">
-                  <p class="fst-italic text-center">
-                    Masukan Inputan yang benar agar tidak salah dalam
-                    penghitungan gula darah
-                  </p>
-                  <div class="row">
-                    <div class="col-lg-12">
-                      <div class="row">
-                        <div class="form-floating mb-3 col">
-                          <input
-                            type="number"
-                            id="gulaDarah"
-                            aria-label="First name"
-                            class="form-control"
-                            placeholder="."
-                          />
 
-                          <label for="gulaDarah" style="margin-left: 5px"
-                            >Kadar Gula Darah (mg/dL):</label
-                          >
-                        </div>
-                      </div>
-                      <div class="form-floating mb-3">
-                        <button onclick="cekGulaDarah()" class="cool-button">
-                          Cek
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="tab-pane fade"
-          id="contact-tab-pane"
-          role="tabpanel"
-          aria-labelledby="contact-tab"
-          tabindex="0"
-        >
-          <div class="container" data-aos="fade-up">
-            <div class="section-title">
-              <h2>TEKANAN DARAH</h2>
-              <p>
-                Tekanan darah merupakan tekanan yang terjadi pada pembuluh darah
-                arteri ketika darah kita di pompa oleh jantung untuk di alirkan
-                ke seluruh anggota tubuh
-              </p>
-            </div>
-            <div class="row">
-              <div class="col"></div>
-              <div class="col" style="width: 50%">
-                <h3 class="text-center cool-text">TEKANAN DARAH</h3>
-                <hr />
-              </div>
-              <div class="col"></div>
-            </div>
-            <div class="row">
-              <div class="col-lg-4">
-                <img src="assets/img/imt/imt.png" class="img-fluid" alt="" />
-              </div>
-              <div class="col-lg-4 pt-4 pt-lg-0 content">
-                <p class="fst-italic text-center">
-                  Masukan Inputan yang benar agar tidak salah dalam penghitungan
-                  IMT
-                </p>
+
                 <div class="row">
-                  <div class="col-lg-12">
-                    <div class="row">
-                      <div class="form-floating mb-3 col">
-                        <input
-                          type="number"
-                          id="sistolik"
-                          aria-label="First name"
-                          class="form-control"
-                          placeholder="."
-                        />
-
-                        <label for="sistolik" style="margin-left: 5px"
-                          >Sistolik:</label
-                        >
-                      </div>
-
-                      <div class="form-floating mb-3">
-                        <input
-                          type="number"
-                          id="diastolik"
-                          aria-label="Last name"
-                          class="form-control"
-                          placeholder="."
-                        />
-                        <label for="diastolik" style="margin-left: 5px"
-                          >Diastolik:</label
-                        >
-                      </div>
+                    <div class="col-lg-2 ">
+                        <div class="count-box">
+                            <i class="bi bi-emoji-smile"></i>
+                            <h4>Saran 1</h4>
+                        </div>
                     </div>
-                    <div class="form-floating mb-3">
-                      <button
-                        onclick="hitungTekananDarah()"
-                        class="cool-button"
-                      >
-                        Cek</button
-                      ><br /><br />
-                    </div>
-                  </div>
+
+                    <p class="col-lg-10" id="saran1_tekanan_darah"></p>
                 </div>
-              </div>
+                <hr>
+
+                <div class="row">
+                    <div class="col-lg-2">
+                        <div class="count-box">
+                            <i class="bi bi-journal-richtext"></i>
+                            <h4>Saran 2</h4>
+                        </div>
+                    </div>
+                    <p class="col-lg-10" id="saran2_tekanan_darah"></p>
+                </div>
+                <hr>
+
+                <div class="row">
+                    <div class="col-lg-2">
+                        <div class="count-box">
+                            <i class="bi bi-headset"></i>
+                            <h4>Saran 3</h4>
+                        </div>
+                    </div>
+                    <p class="col-lg-10" id="saran3_tekanan_darah"></p>
+                </div>
+                <hr>
+
+                <div class="row">
+                    <div class="col-lg-2">
+                        <div class="count-box">
+                            <i class="bi bi-award"></i>
+                            <h4>Saran 4</h4>
+                        </div>
+                    </div>
+                    <p class="col-lg-10" id="saran4_tekanan_darah"></p>
+                </div>
             </div>
           </div>
+          
         </div>
-      </div>
-      <div class="text-center">
-        <span id="hasil" class="text-center cool-text"></span>
-        <span id="penjelasan" class="text-center cool-text"></span>
-      </div>
       </section>
       <!-- End About Section -->
 
-    
-      <!-- End Facts Section -->
-
-      <!-- ======= Skills Section ======= -->
-      <section id="skills" class="skills section-bg">
-        <div class="container" data-aos="fade-up">
-          <div class="section-title">
-            <h2>Skills</h2>
-            <p>
-              Magnam dolores commodi suscipit. Necessitatibus eius consequatur
-              ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam
-              quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.
-              Quia fugiat sit in iste officiis commodi quidem hic quas.
-            </p>
-          </div>
-        </div>
-      </section>
-      <!-- End Skills Section -->
-
-      <!-- ======= Resume Section ======= -->
-      <section id="resume" class="resume">
-        <div class="container" data-aos="fade-up">
-          <div class="section-title">
-            <h2>Resume</h2>
-            <p>
-              Magnam dolores commodi suscipit. Necessitatibus eius consequatur
-              ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam
-              quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.
-              Quia fugiat sit in iste officiis commodi quidem hic quas.
-            </p>
-          </div>
-        </div>
-      </section>
-      <!-- End Resume Section -->
-
-      <!-- ======= Portfolio Section ======= -->
-      <section id="portfolio" class="portfolio section-bg">
-        <div class="container" data-aos="fade-up">
-          <div class="section-title">
-            <h2>Portfolio</h2>
-            <p>
-              Magnam dolores commodi suscipit. Necessitatibus eius consequatur
-              ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam
-              quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.
-              Quia fugiat sit in iste officiis commodi quidem hic quas.
-            </p>
-          </div>
-        </div>
-      </section>
-      <!-- End Portfolio Section -->
-
       <!-- ======= Services Section ======= -->
+      <div id="kesimpulan">
       <section id="services" class="services">
         <div class="container" data-aos="fade-up">
           <div class="section-title">
-            <h2>Services</h2>
+            <h2>Kesimpulan</h2>
             <p>
               Magnam dolores commodi suscipit. Necessitatibus eius consequatur
               ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam
@@ -509,11 +626,8 @@
                   </svg>
                   <i class="bx bxl-dribbble"></i>
                 </div>
-                <h4><a href="">Lorem Ipsum</a></h4>
-                <p>
-                  Voluptatum deleniti atque corrupti quos dolores et quas
-                  molestias excepturi
-                </p>
+                <h4><a href="">Index Massa Tubuh</a></h4>
+                <span id="hasil_imt2"></span>
               </div>
             </div>
 
@@ -539,11 +653,8 @@
                   </svg>
                   <i class="bx bx-file"></i>
                 </div>
-                <h4><a href="">Sed Perspiciatis</a></h4>
-                <p>
-                  Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore
-                </p>
+                <h4>Gula Darah</h4>
+                <p id="hasil_gula2"></p>
               </div>
             </div>
 
@@ -569,11 +680,8 @@
                   </svg>
                   <i class="bx bx-tachometer"></i>
                 </div>
-                <h4><a href="">Magni Dolores</a></h4>
-                <p>
-                  Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                  qui officia
-                </p>
+                <h4>Tekanan Darah</h4>
+                <p id="hasil_tekanan_darah2"></p>
               </div>
             </div>
 
@@ -928,7 +1036,7 @@
 
     <!-- Particle HTML -->
     <!-- particles.js container -->
-    <!-- stats - count particles -->
+    <!-- stats - count particles -f->
     <!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
     <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <!-- stats.js lib -->
@@ -952,112 +1060,8 @@
     <script src="assets/js/main.js"></script>
 
     <!-- Custom JS -->
-    <script type="text/javascript">
-      function hitungBMI() {
-        var berat = document.getElementById("berat-badan").value;
-        var tinggi = document.getElementById("tinggi-badan").value;
-        var bmi = berat / Math.pow(tinggi / 100, 2);
-        var keterangan = "";
-        var saran = "";
-
-        if (bmi >= 1 && bmi < 18.5) {
-          keterangan = "Berat badan kurang";
-          saran =
-            "1. Konsumsi makanan yang sehat dan bergizi, termasuk sayuran, buah-buahan, protein rendah lemak, karbohidrat kompleks, dan lemak sehat. \n2. Konsumsi makanan yang lebih sering dalam jumlah kecil-kecil, daripada makan dalam jumlah besar dan jarang.\n3. Minum air yang cukup untuk membantu menjaga tubuh tetap terhidrasi. \n4. Lakukan latihan fisik secara teratur, seperti berjalan, berlari, bersepeda, atau berenang. \n5. Tidur yang cukup untuk membantu tubuh memulihkan diri dan meningkatkan metabolisme. \n6. Hindari kebiasaan merokok dan minum alkohol, karena dapat mempengaruhi nafsu makan dan mengurangi penyerapan nutrisi. \n7. Konsultasikan dengan dokter atau ahli gizi jika Anda memiliki masalah kesehatan atau ingin mengetahui program diet dan latihan yang cocok untuk Anda.";
-        } else if (bmi >= 18.5 && bmi < 25) {
-          keterangan = "Berat badan normal";
-          saran =
-            "1. Makanlah makanan sehat: Pilihlah makanan yang kaya akan nutrisi seperti sayuran, buah-buahan, biji-bijian, dan protein rendah lemak. Hindari makanan yang tinggi kalori dan lemak jenuh. \n2. Olahraga secara teratur: Lakukanlah olahraga setidaknya 30 menit setiap hari. Jenis olahraga yang disarankan antara lain berjalan kaki, berlari, berenang, atau bersepeda. \n3. Kurangi konsumsi gula: Batasi asupan gula, termasuk gula dalam minuman manis, kue-kue, dan camilan. \n4. Minum banyak air: Minumlah setidaknya 8 gelas air putih setiap hari. Ini membantu menjaga tubuh tetap terhidrasi dan mengurangi rasa lapar. \n5.Tidur yang cukup: Tidurlah selama 7-8 jam setiap malam. Kekurangan tidur dapat meningkatkan nafsu makan dan menyebabkan peningkatan berat badan. \n6. Hindari stress: Cari cara untuk mengurangi stres, seperti meditasi, yoga, atau kegiatan yang menenangkan. \n7. Jaga keseimbangan kalori: Upayakan untuk mengonsumsi kalori yang sama dengan yang Anda bakar setiap hari. Ini dapat membantu menjaga berat badan tetap stabil.";
-        } else if (bmi >= 25 && bmi < 30) {
-          keterangan = "Berat badan berlebih";
-          saran =
-            "1. Lakukan olahraga secara teratur: Cobalah untuk melakukan olahraga setidaknya 30 menit per hari. Pilih aktivitas fisik yang menyenangkan seperti berjalan, bersepeda atau berenang. \n2. Kurangi konsumsi kalori: Kurangi konsumsi makanan yang mengandung lemak dan gula tinggi. Makanlah lebih banyak buah-buahan, sayuran, dan sumber protein rendah lemak seperti ikan dan ayam tanpa kulit. \n3. Perbaiki pola makan: Makanlah lebih sering dan dalam porsi kecil. Jangan melewatkan sarapan, dan hindari ngemil di malam hari. \n4. Perbanyak minum air putih: Minumlah air putih secara teratur untuk membantu membuang racun dan menjaga tubuh tetap terhidrasi. \n5. Hindari minuman beralkohol: Hindari minuman beralkohol dan minuman manis berkalori tinggi. \n6. Tidur yang cukup: Tidurlah selama 7-8 jam per hari untuk membantu mengontrol nafsu makan dan menjaga metabolisme tetap sehat. \n7. Konsultasikan dengan dokter: Jika Anda mengalami kesulitan menurunkan berat badan atau memiliki kondisi medis yang mendasar, konsultasikan dengan dokter atau ahli gizi.";
-        } else if (bmi >= 30) {
-          keterangan = "Obesitas";
-          saran =
-            "1. Obesitas adalah penyakit yang terjadi ketika seseorang kelebihan berat badan atau memiliki banyak lemak ekstra. \nObesitas dapat meningkatkan risiko berbagai penyakit seperti diabetes, penyakit jantung, stroke dan beberapa jenis kanker. \n2.Nutrisi seimbang Makanlah makanan yang tinggi serat, protein, dan rendah kalori, serta kurangi makanan yang tinggi lemak, gula, dan garam. \n3. Hindari makanan olahan dan makanan cepat saji serta perbanyak konsumsi sayur dan buah segar. \n4. Preferensi Makanan : Cobalah makan dalam porsi kecil tapi sering dan hindari makan malam. Jangan melewatkan sarapan, karena sarapan dapat membantu metabolisme Anda. \n5. Jika Anda sangat gemuk, bicarakan dengan dokter Anda tentang program penurunan berat badan yang sesuai, seperti B. diet rendah kalori, pengobatan, atau operasi penurunan berat badan.";
-        } else {
-          keterangan = "Mohon di isi terlebih dahulu";
-          saran = "Masukan nilai yang valid";
-        }
-
-        var hasil = "BMI Anda: " + bmi.toFixed(1) + "<br>";
-        hasil += "Keterangan: " + keterangan;
-        document.getElementById("hasil").innerHTML = hasil;
-        var kata = "Penjelasan: " + saran;
-        document.getElementById("penjelasan").innerHTML = kata;
-      }
-
-      function cekGulaDarah() {
-        // Ambil nilai kadar gula darah dari input
-        var gulaDarah = document.getElementById("gulaDarah").value;
-        var keterangan3 = "";
-        var saran2 = "";
-
-        // Cek kadar gula darah dan tampilkan hasil
-        if (gulaDarah >= 1 && gulaDarah < 70) {
-          keterangan3 = "Kadar gula darah rendah";
-          saran3 =
-            "1. Makan dengan teratur:\nIngatlah untuk makan setidaknya tiga kali sehari dan jangan melewatkan waktu makan. Perut kosong dapat menurunkan gula darah, jadi penting untuk makan secara teratur.\n2. Pilih makanan yang sehat:\nUsahakan untuk memilih makanan yang sehat dan berserat tinggi seperti sayuran, buah-buahan dan biji-bijian.\nHindari makanan tinggi gula atau karbohidrat sederhana seperti permen, minuman manis, roti tawar dan nasi putih.\n3. Minum cukup air:\nMinum banyak air dapat membantu menjaga kadar gula darah tetap stabil.\n4. Olahraga:\nOlahraga teratur dapat meningkatkan sensitivitas insulin dan membantu menjaga kadar gula darah tetap stabil. Pilih olahraga yang Anda sukai, seperti hiking, berenang, atau bersepeda.\n5. Konsumsi makanan dengan gula alami:\nMakanan yang mengandung gula alami, seperti buah, kurma, madu, atau sirup maple, dapat membantu menjaga kadar gula darah tetap stabil.\n6. Periksakan kesehatan secara teratur:\nPenting untuk memeriksa kadar gula darah secara teratur dan berkonsultasi dengan dokter jika terjadi perubahan yang signifikan.";
-        } else if (gulaDarah >= 70 && gulaDarah < 140) {
-          keterangan3 = "Kadar gula darah normal";
-          saran3 =
-            "1. Makan makanan yang sehat dan seimbang:\nKontrol asupan karbohidrat, protein, dan lemak. Kurangi konsumsi makanan manis dan karbohidrat sederhana, yang dapat meningkatkan gula darah secara drastis.\n2. Berolahraga secara teratur:\nOlahraga dapat meningkatkan sensitivitas insulin dan membantu tubuh mengatur gula darah dengan lebih efektif. Usahakan untuk melakukan olahraga minimal 30 menit setiap hari atau tiga kali seminggu.\n3. Hindari stres:\nStres dapat meningkatkan kadar gula darah.\n4. Minum air yang cukup:\nAir membantu mengatur gula darah dengan membantu tubuh menghilangkan kelebihan gula dalam urin.";
-        } else if (gulaDarah >= 140 && gulaDarah < 200) {
-          keterangan3 = "Kadar gula darah tinggi, prediabetes";
-          saran3 =
-            "1. Lakukan perubahan gaya hidup sehat seperti:\n* Mengurangi stres dan tidur yang cukup setiap hari.\n* Meningkatkan aktivitas fisik dengan olahraga teratur minimal.\n* Menjaga pola makan yang seimbang dengan mengonsumsi makanan yang rendah gula, rendah karbohidrat, dan tinggi serat.\n2. Memantau kadar gula darah secara teratur dengan mengukur kadar gula darah di rumah atau melakukan tes darah di laboratorium.\n3. Mengonsumsi obat-obatan yang diresepkan oleh dokter, jika diperlukan.\n4. Konsultasikan dengan dokter atau ahli gizi untuk perawatan yang tepat dan terus ikuti rejimen yang direkomendasikan.";
-        } else if (gulaDarah >= 200) {
-          keterangan3 = "Kadar gula darah sangat tinggi, diabetes";
-          saran3 =
-            "1. Jadikan pola makan Anda lebih sehat dengan memilih makanan yang rendah karbohidrat dan gula, tinggi serat dan kaya nutrisi.\n2. Tingkatkan aktivitas fisik dengan berolahraga secara rutin dan konsisten minimal 30 menit setiap hari.\n3. Memantau kadar gula darah secara teratur dengan mengukur kadar gula darah di rumah atau melakukan tes darah di laboratorium.\n4. Mengonsumsi obat-obatan yang diresepkan oleh dokter, seperti insulin atau obat diabetes oral, jika diperlukan,Menghindari kebiasaan merokok dan mengonsumsi alkohol secara berlebihan.";
-        } else {
-          keterangan3 = "Masukkan nilai yang valid";
-          saran3 = "bababababab";
-        }
-
-        hasil += "Hasil: " + keterangan3;
-        document.getElementById("hasil").innerHTML = "hasil:" + keterangan3;
-        var kata = "Saran: " + saran3;
-        document.getElementById("penjelasan").innerHTML = kata;
-      }
-
-      function hitungTekananDarah() {
-        var sistolik = parseInt(document.getElementById("sistolik").value);
-        var diastolik = parseInt(document.getElementById("diastolik").value);
-        var keterangan = "";
-        var saran2 = "";
-
-        if (isNaN(sistolik) || isNaN(diastolik)) {
-          keterangan = "Silahkan masukkan nilai tekanan darah";
-          saran2 = "P";
-        } else if (sistolik < 0 || diastolik < 0) {
-          keterangan = "Tidak ada tekanan darah negatif";
-          saran2 = "Masukan nilai yang valid";
-        } else if (sistolik >= 180 || diastolik >= 120) {
-          keterangan = "Tekanan darah Anda sangat tinggi, segera temui dokter";
-          saran2 =
-            "Oleh karena itu, hal terbaik yang dapat dilakukan adalah segera menghubungi nomor darurat medis seperti 119 atau membawa orang yang terkena kondisi tersebut ke unit gawat darurat terdekat. \n1. Tetap tenang dan jangan panik. Tekanan darah yang sangat tinggi dapat menyebabkan kepanikan dan kecemasan, yang dapat memperburuk kondisi.\n2. Santai dan istirahatlah dalam posisi yang nyaman. Cobalah untuk tidak melakukan aktivitas apa pun dan beristirahatlah dalam posisi yang nyaman, mis. B. duduk atau berbaring.\n3. Periksa tekanan darah Anda secara teratur. Jika monitor tekanan darah tersedia, periksa secara teratur untuk memantau tekanan darah.\n4. Hindari makanan atau minuman yang dapat memperburuk kondisi, seperti B. Minuman yang terlalu asin atau berkafein.\n5. Minum air putih secukupnya. Minum air putih yang cukup dapat membantu mengurangi tekanan darah dan menjaga tubuh tetap terhidrasi.\nIngatlah bahwa tekanan darah yang sangat tinggi adalah keadaan darurat medis yang harus ditangani dengan cepat dan tepat oleh tenaga kesehatan profesional. Oleh karena itu, jika Anda atau orang terdekat Anda menderita kondisi ini, jangan ragu untuk segera mencari pertolongan medis.";
-        } else if (sistolik >= 140 || diastolik >= 90) {
-          keterangan = "Tekanan darah Anda tinggi";
-          saran2 =
-            "1. Lakukan pemeriksaan medis:\nJika Anda memiliki gejala tekanan darah tinggi, seperti sakit kepala, pusing, atau dada sesak, segera hubungi dokter. \n2. Perubahan gaya hidup:\nPerubahan gaya hidup dapat membantu mengontrol tekanan darah Anda. Beberapa perubahan yang dapat Anda lakukan adalah: Makan makanan yang sehat dan rendah garam \n* Berolahraga secara teratur \n* Mengurangi konsumsi alkohol \n* Berhenti merokok \n* Mengurangi stres \n3. Minum obat sesuai petunjuk dokter:\nJika dokter meresepkan obat untuk mengontrol tekanan darah Anda, pastikan untuk minum obat tersebut sesuai petunjuk dokter. Jangan menghentikan penggunaan obat tanpa persetujuan dokter. \n4. Pantau tekanan darah Anda secara teratur \nPeriksa tekanan darah Anda secara teratur di rumah dan dokumentasikan hasilnya. Beri tahu dokter Anda tentang tekanan darah Anda pada setiap kunjungan.";
-        } else if (sistolik >= 120 || diastolik >= 80) {
-          keterangan = "Tekanan darah Anda normal";
-          saran2 =
-            "1. Makan yang sehat: \nMakan makanan yang sehat dan seimbang seperti sayuran, buah-buahan, biji-bijian, ikan, kacang-kacangan dan daging tanpa lemak. Hindari makanan yang mengandung lemak jenuh dan kolesterol tinggi.\n2. Berolahraga secara teratur:\nLakukan olahraga minimal 30 menit setiap hari, seperti berjalan kaki, joging, berenang, atau bersepeda. Olahraga dapat membantu meningkatkan sirkulasi dan mempertahankan tekanan darah normal.\n3. Kurangi konsumsi garam:\nBatasi penggunaan garam, karena garam dapat meningkatkan tekanan darah. Jangan menambahkan garam pada makanan dan hindari makanan olahan yang tinggi garam.\n4. Kurangi konsumsi alkohol:\nMinum alkohol dapat meningkatkan tekanan darah, jadi batasi atau hindari alkohol sama sekali.";
-        } else {
-          keterangan = "Tekanan darah Anda rendah";
-          saran2 =
-            "1. Konsumsi air yang cukup:\nMinum cukup air dapat membantu menjaga jumlah darah dalam tubuh, yang mencegah penurunan tekanan darah. Dianjurkan untuk minum setidaknya 8 gelas air setiap hari.\n2. Konsumsi  gara dalam jumlah yang cukup:\nGaram dapat membantu menjaga keseimbangan elektrolit dalam tubuh, yang mencegah penurunan tekanan darah. Namun, konsumsi garam yang berlebihan juga dapat berdampak negatif bagi kesehatan. \nDianjurkan untuk makan garam secara merata.\n3. Konsumsi makanan yang mengandung natrium:\nSodium adalah mineral yang membantu menjaga keseimbangan elektrolit dalam tubuh. Mengonsumsi makanan dengan sodium, seperti daging, ikan, susu, dan kacang-kacangan, dapat membantu menjaga tekanan \ndarah.\n4. Hindari berdiri terlalu lama:\nBerdiri terlalu lama dapat menyebabkan darah menggenang di kaki dan membuat kaki terasa lemas, yang dapat menyebabkan tekanan darah rendah.\nJika Anda harus berdiri dalam waktu lama, usahakan untuk bergerak atau mengangkat kaki secara teratur.";
-        }
-
-        hasil += "Hasil: " + keterangan;
-        document.getElementById("hasil").innerHTML = "Hasil: " + keterangan;
-
-        var kata = "Saran: " + saran2;
-        document.getElementById("penjelasan").innerHTML = kata;
-      }
-    </script>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   </body>
 </html>
