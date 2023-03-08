@@ -215,10 +215,7 @@
   new Swiper('.portfolio-details-slider', {
     speed: 400,
     loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
+    autoplay: false,
     pagination: {
       el: '.swiper-pagination',
       type: 'bullets',
@@ -230,18 +227,14 @@
    * Testimonials slider
    */
   new Swiper('.testimonials-slider', {
-    speed: 600,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    slidesPerView: 'auto',
+    autoplay: false,
+    loop: false,
     pagination: {
       el: '.swiper-pagination',
       type: 'bullets',
       clickable: true
-    }
+    },
+
   });
 
   /**

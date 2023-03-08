@@ -40,6 +40,7 @@ function hitungBMI() {
     hasil = "(" + keterangan + ")";
     document.getElementById("hasil_imt").innerHTML = hasil;
     document.getElementById("hasil_imt2").innerHTML = hasil;
+    document.getElementById("saran_imt").innerHTML = saran1;
     document.getElementById("saran1_imt").innerHTML = saran1;
     document.getElementById("saran2_imt").innerHTML = saran2;
     document.getElementById("saran3_imt").innerHTML = saran3;
@@ -90,6 +91,7 @@ function hitungBMI() {
 
     hasil = "hasil: " + keterangan;
     document.getElementById("hasil_gula").innerHTML = "hasil:" + keterangan;
+    document.getElementById("saran_gula").innerHTML = saran1;
     document.getElementById("saran1_gula").innerHTML = saran1;
     document.getElementById("saran2_gula").innerHTML = saran2;
     document.getElementById("saran3_gula").innerHTML = saran3;
@@ -145,6 +147,7 @@ function hitungBMI() {
     hasil = "Hasil: " + keterangan;
     document.getElementById("hasil_tekanan_darah").innerHTML = hasil;
     document.getElementById("hasil_tekanan_darah2").innerHTML = hasil;
+    document.getElementById("saran_tekanan_darah").innerHTML = saran1;
     document.getElementById("saran1_tekanan_darah").innerHTML = saran1;
     document.getElementById("saran2_tekanan_darah").innerHTML = saran2;
     document.getElementById("saran3_tekanan_darah").innerHTML = saran3;
